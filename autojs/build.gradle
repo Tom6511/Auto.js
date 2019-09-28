@@ -3,12 +3,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion versions.compile
-    buildToolsVersion versions.buildTool
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
-        minSdkVersion versions.mini
-        targetSdkVersion versions.target
+        minSdkVersion 25
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -37,7 +37,7 @@ repositories {
 }
 
 dependencies {
-    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.1-alpha01', {
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.3.0-alpha02', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testImplementation 'junit:junit:4.12'
@@ -47,19 +47,19 @@ dependencies {
     api('com.afollestad.material-dialogs:core:0.9.2.3', {
         exclude group: 'com.android.support'
     })
-    api 'com.google.android.material:material:1.1.0-alpha01'
+    api 'com.google.android.material:material:1.1.0-alpha10'
     api 'com.github.hyb1996:EnhancedFloaty:0.31'
     api 'com.makeramen:roundedimageview:2.3.0'
     // OpenCv
     api(name: 'opencv-3.4.3', ext: 'aar')
     // OkHttp
-    api 'com.squareup.okhttp3:okhttp:3.10.0'
+    api 'com.squareup.okhttp3:okhttp:4.2.0'
     // JDeferred
     api 'org.jdeferred:jdeferred-android-aar:1.2.6'
     //RootShell
     api 'com.github.Stericson:RootShell:1.6'
     // Gson
-    api 'com.google.code.gson:gson:2.8.2'
+    api 'com.google.code.gson:gson:2.8.5'
     // log4j
     api group: 'de.mindpipe.android', name: 'android-logging-log4j', version: '1.0.3'
     api group: 'log4j', name: 'log4j', version: '1.2.17'
